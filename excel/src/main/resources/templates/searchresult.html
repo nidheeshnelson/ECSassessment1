@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search Result</title>
+</head>
+<body>
+    <h1>Search Result</h1>
+    <div th:each="student : ${StudentList}">
+        <p><b>Name:</b> <span th:text="${student.name}"></span></p>
+        <p><b>Admission No:</b> <span th:text="${student.admission}"></span></p>
+        <p><b>Percentage:</b> <span th:text="${student.percentage}"></span></p>
+        <!-- Display marks in different subjects and their grades -->
+        <p><b>Physics:</b></p>
+        <p>Mark: <span th:text="${student.physicsmark}"></span></p>
+        <p>Grade: <span th:text="${student.physicsgrade}"></span></p>
+        <p>Grade Point: <span th:text="${student.Physicsgradepoint}"></span></p>
+        
+        <p><b>Chemistry:</b></p>
+        <p>Mark: <span th:text="${student.chemistrymark}"></span></p>
+        <p>Grade: <span th:text="${student.chemistrygrade}"></span></p>
+        <p>Grade Point: <span th:text="${student.chemistrygradepoint}"></span></p>
+
+        <p><b>Maths:</b></p>
+        <p>Mark: <span th:text="${student.mathsmark}"></span></p>
+        <p>Grade: <span th:text="${student.mathsgrade}"></span></p>
+        <p>Grade Point: <span th:text="${student.mathsgradepoint}"></span></p>
+
+    </div>
+</body>
+</html>
